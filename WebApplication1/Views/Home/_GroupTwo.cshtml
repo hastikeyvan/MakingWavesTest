@@ -1,0 +1,15 @@
+﻿@model IEnumerable<WebApplication1.Models.DataList>
+<div class="table-responsive" id="Grid2" name="Grid2">
+
+    @if (Model != null)
+    {
+        WebGrid grid = new WebGrid(Model, rowsPerPage: 20, canSort: true, canPage: true, ajaxUpdateContainerId: "Grid");@grid.GetHtml(htmlAttributes: new { id = "grid2" },
+tableStyle: "table table-hover", headerStyle: "signifikant-th", footerStyle: "table-pager", columns: new[] {
+grid.Column("id","#"),
+grid.Column("name","name"),
+
+grid.Column("year","year"),
+grid.Column("color","color"),
+grid.Column("pantone_value","pantone_value") })
+}
+    </div>

@@ -1,0 +1,23 @@
+﻿@using WebApplication1.Models
+@{
+    ViewBag.Title = "Home Page";
+}
+<h4>List of Received Data from API:</h4>
+<div class="row" id="Devide3">
+    <h3>Group1</h3>
+    <br />
+    @{var Groupone = ViewData["GroupOne"] as List<DataList>;}
+    @Html.Partial("_GroupOne", Groupone)
+</div>
+<div class="row" id="Devide2">
+    <h3>Group2</h3>
+    <br />
+  @{ var GroupTwo = ViewData["GroupTwo"] as List<DataList>;}
+    @Html.Partial("_GroupTwo",GroupTwo)
+</div>
+<div class="row" id="Group3">
+    <h3>Group3</h3>
+    <br />
+    @{ var GroupThree = ViewData["Rest"] as List<DataList>;}
+    @Html.Partial("_GroupThree",GroupThree)
+</div>
